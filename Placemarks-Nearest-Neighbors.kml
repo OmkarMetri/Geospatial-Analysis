@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+    <Document>
+        <!-- Styling -->
+        <Style id="redPin">
+            <IconStyle>
+                <Icon>
+                    <href>http://www.google.com/intl/en_us/mapfiles/ms/micons/red-dot.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+
+        <Style id="transparentBlue">
+            <PolyStyle>
+                <color>FFFF0000</color>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+
+        <Style id="greenLine">
+            <LineStyle>
+                <color>ff00ff00</color>
+                <width>3</width>
+            </LineStyle>
+        </Style>
+
+        <Style id="blueLine">
+            <LineStyle>
+                <color>ffff0000</color>
+                <width>3</width>
+            </LineStyle>
+        </Style>
+
+        <!-- Folder 1: libraries -->
+        <Folder>
+            <name>libraries</name>
+            <Placemark>
+                <name>Leavey</name>
+                <styleUrl>#redPin</styleUrl>
+                <Point>
+                    <coordinates>-118.28292851816859,34.02152865429954</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Doheny</name>
+                <styleUrl>#redPin</styleUrl>
+                <Point>
+                    <coordinates>-118.28399559306906,34.02029460555282</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>SciEngineering</name>
+                <styleUrl>#redPin</styleUrl>
+                <Point>
+                    <coordinates>-118.28897859345906,34.01965783255462</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+
+        <!-- Folder 2: eateries -->
+        <Folder>
+            <name>eateries</name>
+            <Placemark>
+                <name>Cafe Anneberg</name>
+                <styleUrl>#redPin</styleUrl>
+                <Point>
+                    <coordinates>-118.28724424875637,34.02096554821964</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Panda express</name>
+                <styleUrl>#redPin</styleUrl>
+                <Point>
+                    <coordinates>-118.28630241149145,34.02028179956489</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Rock Reilly</name>
+                <styleUrl>#redPin</styleUrl>
+                <Point>
+                    <coordinates>-118.28416757392226,34.02424045231563</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+
+        <!-- Folder 3: waterworks -->
+        <Folder>
+            <name>waterworks</name>
+            <Placemark>
+                <name>USC Village</name>
+                <styleUrl>#redPin</styleUrl>
+                <Point>
+                    <coordinates>-118.28517266768762,34.02525454366983</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Traveller</name>
+                <styleUrl>#redPin</styleUrl>
+                <Point>
+                    <coordinates>-118.28512095970434,34.02022581442651</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Gerontology</name>
+                <styleUrl>#redPin</styleUrl>
+                <Point>
+                    <coordinates>-118.29062347354633,34.02020696436932</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+
+        <!-- Folder 4: department buildings -->
+        <Folder>
+            <name>department buildings</name>
+            <Placemark>
+                <name>Sol School</name>
+                <styleUrl>#redPin</styleUrl>
+                <Point>
+                    <coordinates>-118.28358635930157,34.01947410054453</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Parkside College</name>
+                <styleUrl>#redPin</styleUrl>
+                <Point>
+                    <coordinates>-118.29084602835864,34.01919091253684</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>Card Services</name>
+                <styleUrl>#redPin</styleUrl>
+                <Point>
+                    <coordinates>-118.28263993763352,34.02048175372994</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+
+        <!-- Home -->
+        <Placemark>
+            <name>Home Sweet Home</name>
+            <styleUrl>#redPin</styleUrl>
+            <Point>
+                <coordinates>-118.29010666356363,34.03094899084867</coordinates>
+            </Point>
+        </Placemark>
+
+        <!-- Convex Hull -->
+        <Placemark>
+            <name>Convex Hull</name>
+            <styleUrl>#transparentBlue</styleUrl>
+            <Polygon>
+                <outerBoundaryIs>
+                    <LinearRing>
+                        <coordinates>
+                        -118.29084602835864,34.01919091253684 -118.29010666356363,34.03094899084867 -118.28416757392226,34.02424045231563 -118.28292851816859,34.02152865429954 -118.28263993763352,34.02048175372994 -118.28358635930157,34.01947410054453 -118.29084602835864,34.01919091253684
+                        </coordinates>
+                    </LinearRing>
+                  </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+
+
+        <!-- Line from Home to Neighbor 1 -->
+        <Placemark>
+            <name>Neighbor 1</name>
+            <styleUrl>#greenLine</styleUrl>
+            <LineString>
+                <coordinates>
+                    -118.29010666356363,34.03094899084867 -118.28517266768762,34.02525454366983
+                </coordinates>
+            </LineString>
+        </Placemark>
+
+        <!-- Line from Home to Neighbor 2 -->
+        <Placemark>
+            <name>Neighbor 2</name>
+            <styleUrl>#greenLine</styleUrl>
+            <LineString>
+                <coordinates>
+                    -118.29010666356363,34.03094899084867 -118.28416757392226,34.02424045231563
+                </coordinates>
+            </LineString>
+        </Placemark>
+
+
+        <!-- Line from Home to Neighbor 3 -->
+        <Placemark>
+            <name>Neighbor 3</name>
+            <styleUrl>#greenLine</styleUrl>
+            <LineString>
+                <coordinates>
+                    -118.29010666356363,34.03094899084867 -118.28724424875637,34.02096554821964
+                </coordinates>
+            </LineString>
+        </Placemark>
+
+
+
+        <!-- Line from Home to Neighbor 4 -->
+        <Placemark>
+            <name>Neighbor 4</name>
+            <styleUrl>#greenLine</styleUrl>
+            <LineString>
+                <coordinates>
+                    -118.29010666356363,34.03094899084867 -118.29062347354633,34.02020696436932
+                </coordinates>
+            </LineString>
+        </Placemark>
+
+    </Document>
+</kml>
