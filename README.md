@@ -2,7 +2,7 @@
 Analyse the different geolocations
 
 
-### Geospatial mapping using Google Earth and KML
+### 1. Geospatial mapping using Google Earth and KML
 * [Placemarks-Nearest-Neighbors.kml](placemarks_nearest_neighbors.kml): Placed 12 coords (and home coordinates) in four KML 'folders' - 'libraries', 'eateries', 'waterworks' and 'department buildings'.
 * Install Google Earth and visualize the data from the KML file
   * Simply copy and paste your KML data into the textbox on the left
@@ -10,7 +10,7 @@ Analyse the different geolocations
 
 <p align="center"><img src="images/spatial_visualization.png" width="500"></p>
 
-### Geospatial Queries using POSTGIS
+### 2. Geospatial Queries using POSTGIS
 1. Compute Convex Hull
    * [Spatial_queries.sql](spatial_queries.sql): Compute the convex hull for the 13 points (a convex hull for a set of 2D points is the smallest convex polygon that contains the point set) 
    * Use the query results to create a polygon in the `.kml` file 
@@ -24,7 +24,7 @@ Analyse the different geolocations
 <p align="center"><img src="images/spatial_queries.png" width="500"></p>
 
 
-### Visualize using Openlayers (Javascript API)
+### 3. Visualize using Openlayers (Javascript API)
 * [Openlayers](open_layers.html): Open the file using chrome 
 * The idea is to store your 13 sampled points, via web browser, in a browser cache area of the local machine, where the data would persist (even after you close the browser)
 * Now, read back the stored values, and visualize them, using the OpenLayers API
@@ -32,7 +32,7 @@ Analyse the different geolocations
 <p align="center"><img src="images/openlayers.png" width="500"></p>
 
 
-### Spirograph
+### 4. Spirograph
 
 * [Coord_generator_script.py](coord_generator_script.py): Use this script to generate co-ordinates (`.kml` file) around one geospatial point
 * [Sprio.kml](spiro.kml): To visualize the spirograph in Google Earth
@@ -42,3 +42,26 @@ Analyse the different geolocations
   * Use the `Map` tab, followed by `Add -> Add Layer from File`, and upload the shapefile .zip
 
 <p align="center"><img src="images/spiro.png" width="500"></p>
+
+### 5. Spatial Data Analysis using MongoDB
+
+#### a. Use the above 12 coordinates to visualize using MongoDB charts
+
+<p align="center"><img src="images/geoscatter.png" width="350"></p>
+
+
+#### b. Display the northern half of 12 coordinates using bounding box
+
+<p align="center"><img src="images/bounding_box.png" width="350"></p>
+
+#### c. Spirograph using MongoDB charts
+
+<p align="center"><img src="images/spirograph.png" width="350"></p>
+
+#### d. Triangular bounding box of spirograph coords using polygon
+
+<p align="center"><img src="images/triangle_box.png" width="350"></p>
+
+#### e. Display all the national parks to west of `Rockies` in United States
+
+<p align="center"><img src="images/west_of_rockies.png" width="350"></p>
