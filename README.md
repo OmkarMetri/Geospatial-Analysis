@@ -47,21 +47,21 @@ Analyse the different geolocations
 
 #### a. Use the above 12 coordinates to visualize using MongoDB charts
 
-<p align="center"><img src="images/geoscatter.png" width="350"></p>
+<p align="center"><img src="images/geoscatter.png" width="450"></p>
 
 
 #### b. Display the northern half of 12 coordinates using bounding box
 
-<p align="center"><img src="images/bounding_box.png" width="350"></p>
+<p align="center"><img src="images/bounding_box.png" width="450"></p>
 
 #### c. Spirograph using MongoDB charts
 
-<p align="center"><img src="images/spirograph.png" width="350"></p>
+<p align="center"><img src="images/spirograph.png" width="450"></p>
 
 #### d. Triangular bounding box of spirograph coords using polygon
 
-<p align="center"><img src="images/triangle_box.png" width="350"></p>
+<p align="center"><img src="images/triangle_box.png" width="450"></p>
 
 #### e. Display all the national parks to west of `Rockies` in United States
 
-<p align="center"><img src="images/west_of_rockies.png" width="350"></p>
+<p align="center"><img src="images/west_of_rockies.png" width="450"></p>
