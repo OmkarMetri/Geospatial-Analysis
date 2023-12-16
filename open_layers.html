@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>OpenLayers</title>
+        <script src="https://openlayers.org/api/OpenLayers.js"></script>
+        <style>
+        #map {
+            width:600px;
+            height:600px;
+        }
+        </style>
+    </head>
+
+    <body>
+    <div id="map"></div>
+
+        <script>
+
+        var data = {'coordinates': [  {'name': 'Leavey', 'long': -118.28292851816859, 'lat': 34.02152865429954},
+                                      {'name': 'Doheny', 'long': -118.28399559306906, 'lat': 34.02029460555282},
+                                      {'name': 'Science Engineering', 'long': -118.28897859345906, 'lat': 34.01965783255462},
+                                      {'name': 'Anneberg', 'long': -118.28724424875637, 'lat': 34.02096554821964},
+                                      {'name': 'Panda Express', 'long': -118.28630241149145, 'lat': 34.02028179956489},
+                                      {'name': 'Rock Reilly', 'long': -118.28416757392226, 'lat': 34.02424045231563},
+                                      {'name': 'USC Village', 'long': -118.28517266768762, 'lat': 34.02525454366983},
+                                      {'name': 'Traveller', 'long': -118.28512095970434, 'lat': 34.02022581442651},
+                                      {'name': 'Gerontology', 'long': -118.29062347354633, 'lat': 34.02020696436932},
+                                      {'name': 'Sol School', 'long': -118.28358635930157, 'lat': 34.01947410054453},
+                                      {'name': 'Parkside', 'long': -118.29084602835864, 'lat': 34.01919091253684},
+                                      {'name': 'Card Services', 'long': -118.28263993763352, 'lat': 34.02048175372994},
+                                      {'name': 'Home', 'long': -118.29010666356363, 'lat': 34.03094899084867}]};
+
+        localStorage.setItem("myData",JSON.stringify(data));
+
+        var dataStored = JSON.parse(localStorage.getItem("myData"));
+        console.log(dataStored);
+
+        var coordinates = dataStored.coordinates;
+        for (var index in coordinates) {
+          console.log(coordinates[index]);
+        }
+
+        function initMap() {
+                map = new OpenLayers.Map('map');
+                basemap = new OpenLayers.Layer.OSM("Simple OSM Map");
+                map.addLayer(basemap);
+                markers = new OpenLayers.Layer.Markers("Markers");
+                map.addLayer(markers);
+        }
+
+        function addMarker(latitude, longitude) {
+                var lonLat = new OpenLayers.LonLat(longitude, latitude)
+                    .transform(
+                        new OpenLayers.Projection("EPSG:4326"),
+                        map.getProjectionObject()
+                );
+                var point = new OpenLayers.Marker(lonLat);
+                markers.addMarker(point);
+                map.setCenter(lonLat,18);
+        }
+
+        initMap();
+
+        // Tommy Trojan and 13 sampled points
+        addMarker(34.0205,-118.28538);
+        for (var index in coordinates) {
+            addMarker(coordinates[index]["lat"], coordinates[index]["long"])
+        }
+
+        </script>
+
+    </body>
+
+</html>
+
+
