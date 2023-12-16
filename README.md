@@ -13,12 +13,12 @@ Analyse the different geolocations
 ### Geospatial Queries using POSTGIS
 1. Compute Convex Hull
    * [Spatial_queries.sql](spatial_queries.sql): Compute the convex hull for the 13 points (a convex hull for a set of 2D points is the smallest convex polygon that contains the point set) 
-   * Use the query results to create a polygon in the .kml file 
+   * Use the query results to create a polygon in the `.kml` file 
    * Load this into Google Earth and visually verify that all your points are on/inside the convex hull
 
 2. Compute Nearest Neighbors
    * [Spatial_queries.sql](spatial_queries.sql): Compute the four nearest neighbors from home location
-   * Use the query's results to create four line segments in your .kml file
+   * Use the query's results to create four line segments in your `.kml` file
    * Load this into Google Earth and visually verify if it looks correct
 
 <p align="center"><img src="images/spatial_queries.png" width="500"></p>
@@ -30,3 +30,15 @@ Analyse the different geolocations
 * Now, read back the stored values, and visualize them, using the OpenLayers API
 
 <p align="center"><img src="images/openlayers.png" width="500"></p>
+
+
+### Spirograph
+
+* [Coord_generator_script.py](coord_generator_script.py): Use this script to generate co-ordinates (`.kml` file) around one geospatial point
+* [Sprio.kml](spiro.kml): To visualize the spirograph in Google Earth
+* Additionally, convert the KML to an ESRI `shapefile` to visualize the shapefile data using ArcGIS Online
+  * To convert your .kml into a shapefile, use this online converter: https://mygeodata.cloud/converter/kml-to-shp - the result will be a .zip (which is what we call 'shapefile')
+  * Once you have shapefile, upload it to ArcGIS online map creator to view your Spirograph curve-shaped points by logging onto ArcGIS (after creating a free public account), at https://www.arcgis.com/
+  * Use the `Map` tab, followed by `Add -> Add Layer from File`, and upload the shapefile .zip
+
+<p align="center"><img src="images/spiro.png" width="500"></p>
